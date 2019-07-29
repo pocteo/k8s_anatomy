@@ -1,1 +1,4 @@
-{"apiVersion": "abac.authorization.kubernetes.io/v1beta1", "kind": "Policy", "spec": {"user":"abir", "namespace": "*", "resource": "*", "apiGroup": "*", "nonResourcePath": "*"}}
+{"apiVersion": "abac.authorization.kubernetes.io/v1beta1", "kind": "Policy", "spec": {"user":"kubernetes-admin", "namespace": "*", "resource": "*", "apiGroup": "*"}}
+{"apiVersion": "abac.authorization.kubernetes.io/v1beta1", "kind": "Policy", "spec": {"user":"kube-scheduler", "namespace": "*", "resource": "*", "apiGroup": "*" }}
+{"apiVersion": "abac.authorization.kubernetes.io/v1beta1", "kind": "Policy", "spec": {"user":"kube-controller-manager", "namespace": "*", "resource": "*", "apiGroup": "*" }}
+

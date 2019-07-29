@@ -3,20 +3,21 @@ Description=Kubernetes API Server
 Documentation=https://github.com/kubernetes/kubernetes
 
 [Service]
-ExecStart=/usr/local/bin/kube-apiserver \
+ExecStart=/usr/bin/kube-apiserver \
   --advertise-address=127.0.0.1 \
   --allow-privileged=true \
   --audit-log-path=/var/log/audit.log \
-  --authorization-mode=AlwaysAllow \
+  --authorization-mode=ABAC \
+  --anonymous-auth=false \
+  --authorization-policy-file=/var/lib/kubernetes/auth-policy.json \
   --token-auth-file=/var/lib/kubernetes/tokens.csv \
   --basic-auth-file=/var/lib/kubernetes/basic_auth.csv \
-  --anonymous-auth=true
   --enable-bootstrap-token-auth=true \
   --client-ca-file=/var/lib/kubernetes/ca.crt \
   --enable-swagger-ui=true \
-  --etcd-cafile=/var/lib/kubernetes/ca.crt \
-  --etcd-certfile=/var/lib/kubernetes/kube-apiserver.crt \
-  --etcd-keyfile=/var/lib/kubernetes/kube-apiserver.key \
+  --etcd-cafile=/var/lib/kubernetes/ca-etcd.crt \
+  --etcd-certfile=/var/lib/kubernetes/etcd-client.crt  \
+  --etcd-keyfile=/var/lib/kubernetes/etcd-client.key  \
   --etcd-servers=https://127.0.0.1:2379 \
   --runtime-config=api/all \
   --tls-cert-file=/var/lib/kubernetes/kube-apiserver.crt \
