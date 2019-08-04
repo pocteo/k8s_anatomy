@@ -1,14 +1,19 @@
 [Unit]
 Description=Kubernetes Controller Manager
-Documentation=https://github.com/kubernetes/kubernetes
+Documentation=https://githubi.com/kubernetes/kubernetes
 
 [Service]
 ExecStart=/usr/local/bin/kube-controller-manager \
   --cluster-name=kubernetes-the-hard-way \
   --cluster-signing-cert-file=/var/lib/kubernetes/ca.crt \
   --cluster-signing-key-file=/var/lib/kubernetes/ca.key \
+  --client-ca-file=/var/lib/kubernetes/ca.crt \
   --kubeconfig=/var/lib/kubernetes/controller-manager.conf \
+  --authorization-kubeconfig=/var/lib/kubernetes/controller-manager.conf \
+  --bind-address=127.0.0.1 \
+  --authentication-kubeconfig=/var/lib/kubernetes/controller-manager.conf \
   --leader-elect=true \
+  --master=https://127.0.0.1:6443 \
   --root-ca-file=/var/lib/kubernetes/ca.crt \
   --v=2
 Restart=on-failure
