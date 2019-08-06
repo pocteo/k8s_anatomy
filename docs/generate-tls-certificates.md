@@ -47,7 +47,7 @@ This is why in this section we will create a certificate for each kubernetes com
 
 In the rest of the tutorial we need a config file for generating a Certificate Signing Request (CSR) for each component, but since all components will run on `localhost`, we will use the same openssl config file that sets the possible IPs to `127.0.0.1` :
 
-```javascript
+```
 <script src="https://gist.github.com/AbirHamzi/d33ea331a0ca0caefa3c6eaf460a70fe.js"></script>
 ```
 
