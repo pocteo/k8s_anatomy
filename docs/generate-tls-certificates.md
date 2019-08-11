@@ -207,4 +207,4 @@ openssl req -new -key kube-apiserver.key -subj "/CN=kube-apiserver" -out kube-ap
 openssl x509 -req -in kube-apiserver.csr -CA ca.crt -CAkey ca.key -CAcreateserial  -out kube-apiserver.crt -extensions v3_req -extfile openssl.cnf -days 1000
 ```
 
-Next step will be to add the same parameters when starting kubernetes components binary .
+Next: [Generating Kubernetes Configuration Files for Authentication](generate-kubeconfig-files.md)
