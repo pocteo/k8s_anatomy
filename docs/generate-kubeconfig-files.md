@@ -112,3 +112,4 @@ $ kubectl config use-context kubernetes-admin --kubeconfig admin.conf
 
 
 
+Next: [Bootstrapping the etcd Cluster](bootstrapping-etcd-cluster.md)
