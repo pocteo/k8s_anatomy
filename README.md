@@ -1,6 +1,6 @@
 # Kubernetes Anatomy
 
-[k8s]: https://assets.sumologic.com/application-content/Kubernetes-Logo-300x300.png 
+![k8s](https://www.functionize.com/wp-content/uploads/2018/04/kubernetes-logo2-768x648.png)
 
 Kubernetes or k8s abstracts the underlying infrastructure by providing us with a simple API to which we can send requests but in this tutorial we are going into the dirty work of kubernetes. If you are looking for a ready-to-use k8s cluster for development or test perpose , I recommend using [Minikube](https://kubernetes.io/fr/docs/tasks/tools/install-minikube/).
 
