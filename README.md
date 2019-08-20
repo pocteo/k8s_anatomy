@@ -1,7 +1,7 @@
 # Kubernetes Anatomy
-
+<p align="center">
 ![k8s](https://assets.sumologic.com/application-content/Kubernetes-Logo-300x300.png).
-
+</p>
 Kubernetes or k8s abstracts the underlying infrastructure by providing us with a simple API to which we can send requests but in this tutorial we are going into the dirty work of kubernetes. If you are looking for a ready-to-use k8s cluster for development or test perpose , I recommend using [Minikube](https://kubernetes.io/fr/docs/tasks/tools/install-minikube/).
 
 By learning k8s anatomy you will be able to bootstrap a kubernetes cluster with end-to-end encryption between components.
