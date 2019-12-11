@@ -7,7 +7,7 @@ ExecStart=/usr/bin/etcd \
   --name=etcd-server  \
   --cert-file=/etc/etcd/etcd-server.crt \
   --key-file=/etc/etcd/etcd-server.key \
-  --trusted-ca-file=/etc/etcd/ca.crt \
+  --trusted-ca-file=/etc/etcd/ca-etcd.crt \
   --client-cert-auth \
   --listen-client-urls https://127.0.0.1:2379 \
   --advertise-client-urls https://127.0.0.1:2379 \
